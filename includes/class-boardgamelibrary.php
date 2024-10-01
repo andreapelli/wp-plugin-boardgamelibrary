@@ -61,3 +61,16 @@ class Boardgamelibrary {
         return $this->version;
     }
 }
+
+add_action('admin_notices', 'boardgamelibrary_import_notice');
+
+function boardgamelibrary_import_notice() {
+    if (isset($_GET['import']) && $_GET['import'] === 'success') {
+        $imported_count = isset($_GET['imported']) ? intval($_GET['imported']) : 0;
+        $updated_count = isset($_GET['updated']) ? intval($_GET['updated']) : 0;
+
+        echo '<div class="notice notice-success is-dismissible">';
+        echo '<p>' . sprintf(__('Importazione completata con successo! %d giochi importati e %d giochi aggiornati.', 'boardgamelibrary'), $imported_count, $updated_count) . '</p>';
+        echo '</div>';
+    }
+}

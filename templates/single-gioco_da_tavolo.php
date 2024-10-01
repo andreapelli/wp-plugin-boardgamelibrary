@@ -13,13 +13,14 @@
 
                 <div class="entry-content">
                     <?php
-                    // Mostra l'immagine di copertina
+                    // Mostra l'immagine di copertura
                     if (has_post_thumbnail()) {
                         echo '<div class="gioco-cover">';
                         the_post_thumbnail('large');
                         echo '</div>';
                     }
 
+                    // Mostra il contenuto
                     the_content();
 
                     // Mostra i campi personalizzati
@@ -34,15 +35,17 @@
                         <p><strong>Età:</strong> <?php echo $min_age; ?>+</p>
                         <p><strong>Durata:</strong> <?php echo $play_time; ?> min</p>
                         <p><strong>Difficoltà:</strong> 
-                            <?php
-                            for ($i = 1; $i <= 5; $i++) {
-                                if ($i <= $difficulty) {
-                                    echo '<span class="dashicons dashicons-admin-generic"></span>';
-                                } else {
-                                    echo '<span class="dashicons dashicons-admin-generic inactive"></span>';
+                            <div class="gioco-difficulty">
+                                <?php
+                                for ($i = 1; $i <= 5; $i++) {
+                                    if ($i <= $difficulty) {
+                                        echo '<span class="dashicons dashicons-admin-generic"></span>'; // Icona piena
+                                    } else {
+                                        echo '<span class="dashicons dashicons-admin-generic inactive"></span>'; // Icona vuota
+                                    }
                                 }
-                            }
-                            ?>
+                                ?>
+                            </div>
                         </p>
                     </div>
 
@@ -52,7 +55,11 @@
                     foreach ($taxonomies as $taxonomy) {
                         $terms = get_the_terms(get_the_ID(), $taxonomy);
                         if ($terms && !is_wp_error($terms)) {
-                            echo '<p><strong>' . ucfirst($taxonomy) . ':</strong> ' . join(', ', wp_list_pluck($terms, 'name')) . '</p>';
+                            echo '<p><strong>' . ucfirst(str_replace('_', ' ', $taxonomy)) . ':</strong> '; // Sostituisci underscore con spazio
+                            foreach ($terms as $term) {
+                                echo '<a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a>, ';
+                            }
+                            echo '</p>';
                         }
                     }
 

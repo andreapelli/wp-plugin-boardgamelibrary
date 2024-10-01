@@ -42,11 +42,11 @@
     display: flex;
     align-items: center;
 }
-.gioco-difficulty::before {
+/* .gioco-difficulty::before {
     content: "Difficoltà: ";
     margin-right: 5px;
     font-size: 0.9em;
-}
+} */
 .gioco-difficulty .dashicons-admin-generic {
     color: #0073aa;
     font-size: 18px;
@@ -93,4 +93,38 @@
 #giochi-sort-form select,
 #giochi-sort-form input {
     margin-right: 10px;
+}
+
+.gioco-item h2.entry-title {
+    font-size: 2rem; /* Riduce la dimensione del titolo a 2rem */
+}
+
+/* Stili per la pagina del singolo gioco */
+.entry-content {
+    background-color: #f9f9f9; /* Colore di sfondo per il contenuto */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gioco-details p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.gioco-details strong {
+    color: #333; /* Colore per i titoli dei dettagli */
+}
+
+.gioco-materiali {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.gioco-materiali li {
+    margin-bottom: 5px;
+}
+
+.gioco-details .dashicons {
+    color: #0073aa; /* Colore per le icone di difficoltà */
 }

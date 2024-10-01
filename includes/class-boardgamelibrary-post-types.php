@@ -1,5 +1,11 @@
 <?php
 class Boardgamelibrary_Post_Types {
+
+    public function __construct() {
+        //add_action('init', [$this, 'register_gioco_da_tavolo_post_type']);
+        add_action('init', [$this, 'register_taxonomies']);
+    }
+
     public function register_gioco_da_tavolo_post_type() {
         $labels = array(
             'name'               => _x('Giochi da Tavolo', 'post type general name', 'boardgamelibrary'),
@@ -34,5 +40,21 @@ class Boardgamelibrary_Post_Types {
         );
 
         register_post_type('gioco_da_tavolo', $args);
+    }
+
+    public function register_taxonomies() {
+        $taxonomies = [
+            'ambientazione' => 'Ambientazione',
+            'meccanica' => 'Meccanica',
+            'stile_di_gioco' => 'Stile di Gioco'
+        ];
+
+        foreach ($taxonomies as $taxonomy => $label) {
+            register_taxonomy($taxonomy, 'gioco_da_tavolo', [
+                'label' => __($label, 'boardgamelibrary'),
+                'rewrite' => ['slug' => $taxonomy],
+                'hierarchical' => true,
+            ]);
+        }
     }
 }

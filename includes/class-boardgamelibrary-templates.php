@@ -3,6 +3,9 @@ class Boardgamelibrary_Templates {
     public function __construct() {
         add_action('wp_enqueue_scripts', array($this, 'enqueue_styles'));
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_filter('single_template', array($this, 'load_gioco_da_tavolo_template'));
+        add_filter('archive_template', array($this, 'load_gioco_da_tavolo_archive_template'));
+        add_filter('taxonomy_template', array($this, 'load_taxonomy_template')); // Add this line
     }
 
     public function load_gioco_da_tavolo_template($single_template) {
@@ -23,6 +26,16 @@ class Boardgamelibrary_Templates {
             }
         }
         return $archive_template;
+    }
+
+    public function load_taxonomy_template($taxonomy_template) {
+        if (is_tax('stile_di_gioco' || 'ambientazione' || 'meccanica')) { 
+            $plugin_template = plugin_dir_path(dirname(__FILE__)) . 'templates/taxonomy-gioco_da_tavolo.php';
+            if (file_exists($plugin_template)) {
+                return $plugin_template;
+            }
+        }
+        return $taxonomy_template;
     }
 
     public function enqueue_styles() {

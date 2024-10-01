@@ -4,34 +4,45 @@
     <h1><?php post_type_archive_title(); ?></h1>
 
     <div class="giochi-controls">
-        <button id="grid-view">Vista Griglia</button>
-        <button id="list-view">Vista Lista</button>
+        <form id="giochi-sort-form" method="get">
+            <label for="orderby">Ordina per:</label>
+            <select name="orderby" id="orderby">
+                <option value="title" <?php selected(get_query_var('orderby'), 'title'); ?>>Nome</option>
+                <option value="difficulty" <?php selected(get_query_var('orderby'), 'difficulty'); ?>>Difficoltà</option>
+                <option value="play_time" <?php selected(get_query_var('orderby'), 'play_time'); ?>>Durata partita</option>
+                <option value="min_players" <?php selected(get_query_var('orderby'), 'min_players'); ?>>Minimo giocatori</option>
+                <option value="max_players" <?php selected(get_query_var('orderby'), 'max_players'); ?>>Massimo giocatori</option>
+                <option value="min_age" <?php selected(get_query_var('orderby'), 'min_age'); ?>>Età minima</option>
+            </select>
+            <label for="order">Ordine:</label>
+            <select name="order" id="order">
+                <option value="ASC" <?php selected(get_query_var('order'), 'ASC'); ?>>Crescente</option>
+                <option value="DESC" <?php selected(get_query_var('order'), 'DESC'); ?>>Decrescente</option>
+            </select>
+            <input type="submit" value="Applica">
+        </form>
     </div>
-
-    <!-- L'ordinamento è stato temporaneamente nascosto
-    <form id="giochi-sort-form" method="get">
-        <label for="orderby">Ordina per:</label>
-        <select name="orderby" id="orderby">
-            <option value="title" <?php selected(get_query_var('orderby'), 'title'); ?>>Nome</option>
-            <option value="difficulty" <?php selected(get_query_var('orderby'), 'difficulty'); ?>>Difficoltà</option>
-            <option value="play_time" <?php selected(get_query_var('orderby'), 'play_time'); ?>>Durata partita</option>
-            <option value="min_players" <?php selected(get_query_var('orderby'), 'min_players'); ?>>Minimo giocatori</option>
-            <option value="max_players" <?php selected(get_query_var('orderby'), 'max_players'); ?>>Massimo giocatori</option>
-            <option value="min_age" <?php selected(get_query_var('orderby'), 'min_age'); ?>>Età minima</option>
-        </select>
-        <label for="order">Ordine:</label>
-        <select name="order" id="order">
-            <option value="ASC" <?php selected(get_query_var('order'), 'ASC'); ?>>Crescente</option>
-            <option value="DESC" <?php selected(get_query_var('order'), 'DESC'); ?>>Decrescente</option>
-        </select>
-        <input type="submit" value="Applica">
-    </form>
-    -->
 
     <div id="giochi-list" class="giochi-grid">
         <?php
-        if (have_posts()) :
-            while (have_posts()) : the_post();
+        // Modifica il numero di post per pagina a 12
+        $args = array(
+            'post_type' => 'gioco_da_tavolo',
+            'posts_per_page' => 12, // Mostra 12 risultati
+            'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+        );
+
+        // Aggiungi ordinamento se specificato
+        if (get_query_var('orderby')) {
+            $args['orderby'] = get_query_var('orderby');
+            $args['order'] = get_query_var('order') ? get_query_var('order') : 'ASC';
+        }
+
+        $the_query = new WP_Query($args);
+
+        if ($the_query->have_posts()) :
+            while ($the_query->have_posts()) : 
+                $the_query->the_post();
                 $min_players = get_post_meta(get_the_ID(), 'min_players', true);
                 $max_players = get_post_meta(get_the_ID(), 'max_players', true);
                 $min_age = get_post_meta(get_the_ID(), 'min_age', true);
@@ -55,6 +66,7 @@
                             <span class="gioco-time"><span class="dashicons dashicons-clock"></span> <?php echo $play_time; ?> min</span>
                         </div>
                         <div class="gioco-difficulty">
+                            <span>Difficoltà:&nbsp;</span>
                             <?php
                             for ($i = 1; $i <= 5; $i++) {
                                 if ($i <= $difficulty) {
@@ -77,12 +89,19 @@
                     </div>
                 </div>
             <?php endwhile;
-            
-            the_posts_pagination();
-            
-        else :
-            echo '<p>Nessun gioco trovato.</p>';
-        endif;
+        else: ?>
+            <p>Nessun gioco trovato.</p>
+        <?php endif; ?>
+        
+    </div>
+
+    <div class="pagination-controls">
+        <?php
+        the_posts_pagination(array(
+            'mid_size' => 2,
+            'prev_text' => __('« Precedente', 'boardgamelibrary'),
+            'next_text' => __('Successivo »', 'boardgamelibrary'),
+        ));
         ?>
     </div>
 </div>
