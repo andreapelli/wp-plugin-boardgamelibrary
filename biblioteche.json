@@ -1,0 +1,442 @@
+[
+  {
+    "id": "1",
+    "name": "Biblioteca comunale",
+    "address": "Via Piave 14, 27020 Alagna",
+    "created_at": null,
+    "updated_at": null,
+    "town": "ALAGNA",
+    "phone": null,
+    "email": "biblioteca.alagna@gmail.com"
+  },
+  {
+    "id": "2",
+    "name": "Biblioteca comunale \"Pietro Maggi\"",
+    "address": "Piazza Eugenio Bergamasco 5, 27031 Candia Lomellina",
+    "created_at": null,
+    "updated_at": null,
+    "town": "CANDIA LOMELLINA",
+    "phone": "3384963929",
+    "email": "biblioteca@comune.candialomellina.pv.it"
+  },
+  {
+    "id": "3",
+    "name": "Biblioteca comunale \"Anna Del Bo Boffino\"",
+    "address": "Via Oberdan, 3, 27023 Cassolnovo",
+    "created_at": null,
+    "updated_at": null,
+    "town": "CASSOLNOVO",
+    "phone": "0381/910150",
+    "email": "biblioteca.cassolo@libero.it"
+  },
+  {
+    "id": "4",
+    "name": "Biblioteca comunale \"Roberto Rampi\"",
+    "address": "Piazza Garibaldi, 26, 27024 Cilavegna",
+    "created_at": null,
+    "updated_at": null,
+    "town": "CILAVEGNA",
+    "phone": "0381/660552",
+    "email": "biblio@comune.cilavegna.pv.it"
+  },
+  {
+    "id": "5",
+    "name": "Biblioteca comunale \"Dino Laboranti\"",
+    "address": "Via Strada Nuova, 1, 27020 Dorno",
+    "created_at": null,
+    "updated_at": null,
+    "town": "DORNO",
+    "phone": "0382/998208",
+    "email": "bibliotecadorno@comune.dorno.pv.it"
+  },
+  {
+    "id": "6",
+    "name": "Biblioteca comunale",
+    "address": "Via Roma, 10, 27032 Ferrera Erbognone",
+    "created_at": null,
+    "updated_at": null,
+    "town": "FERRERA ERBOGNONE",
+    "phone": "0382/998208",
+    "email": "biblio.ferrera@alice.it"
+  },
+  {
+    "id": "7",
+    "name": "Biblioteca",
+    "address": "via Annaratone, 29, 27030 Frascarolo",
+    "created_at": null,
+    "updated_at": null,
+    "town": "FRASCAROLO",
+    "phone": "0384/849043",
+    "email": "biblioteca@comunefrascarolo.gov.it"
+  },
+  {
+    "id": "8",
+    "name": "Biblioteca civica \"Gemma Biroli\"",
+    "address": "Piazza Castello, 27025 Gambolò",
+    "created_at": null,
+    "updated_at": null,
+    "town": "GAMBOLÒ",
+    "phone": "0381/937282",
+    "email": "servizisociali@comune.gambolo.pv.it"
+  },
+  {
+    "id": "9",
+    "name": "Biblioteca civica \"Mino Milani\"",
+    "address": "Via Ss. Trinità, 6, 27026 Garlasco",
+    "created_at": null,
+    "updated_at": null,
+    "town": "GARLASCO",
+    "phone": "0382/801009",
+    "email": "bibliogarlasco@yahoo.it"
+  },
+  {
+    "id": "10",
+    "name": "Biblioteca comunale \"Carlo Cantoni\"",
+    "address": "Via Cairoli, 25, 27027 Gropello Cairoli",
+    "created_at": null,
+    "updated_at": null,
+    "town": "GROPELLO CAIROLI",
+    "phone": "0382/815020",
+    "email": "biblioteca@comune.gropellocairoli.pv.it"
+  },
+  {
+    "id": "11",
+    "name": "Biblioteca comunale",
+    "address": "Via Giuseppe Mazzini, 61, 27030 Langosco",
+    "created_at": null,
+    "updated_at": null,
+    "town": "LANGOSCO",
+    "phone": "0384/78075",
+    "email": "ragioneria.langosco@libero.it"
+  },
+  {
+    "id": "12",
+    "name": "Biblioteca comunale \"Opicino De Canistris\"",
+    "address": "Via Carducci, 37/B, 27034 Lomello",
+    "created_at": null,
+    "updated_at": null,
+    "town": "LOMELLO",
+    "phone": "0384/858356",
+    "email": "biblioteca.lomello@libero.it"
+  },
+  {
+    "id": "13",
+    "name": "Biblioteca civica \"Giuseppe Masinari\"",
+    "address": "Piazza della Repubblica, 39, 27035 Mede",
+    "created_at": null,
+    "updated_at": null,
+    "town": "MEDE",
+    "phone": "0384/822217",
+    "email": "biblioteca@comune.mede.pv.it"
+  },
+  {
+    "id": "14",
+    "name": "Biblioteca comunale",
+    "address": "Via Marconi, 21",
+    "created_at": null,
+    "updated_at": null,
+    "town": "MEZZANA RABATTONE",
+    "phone": "0382/918862",
+    "email": "sergioferrari1949@gmail.com"
+  },
+  {
+    "id": "15",
+    "name": "Civico 17, Biblioteca civica \"Francesco Pezza\"",
+    "address": "Via Vittorio Veneto 17, 27036 Mortara",
+    "created_at": null,
+    "updated_at": null,
+    "town": "MORTARA",
+    "phone": "0384/91805",
+    "email": "info@civico17.it"
+  },
+  {
+    "id": "16",
+    "name": "Biblioteca comunale",
+    "address": "Via Piave 14, 27020 Alagna",
+    "created_at": null,
+    "updated_at": null,
+    "town": "ALAGNA",
+    "phone": "",
+    "email": "biblioteca.alagna@gmail.com"
+  },
+  {
+    "id": "17",
+    "name": "Biblioteca comunale \"Pietro Maggi\"",
+    "address": "Piazza Eugenio Bergamasco 5, 27031 Candia Lomellina",
+    "created_at": null,
+    "updated_at": null,
+    "town": "CANDIA LOMELLINA",
+    "phone": "3384963929",
+    "email": "biblioteca@comune.candialomellina.pv.it"
+  },
+  {
+    "id": "18",
+    "name": "Biblioteca comunale \"Anna Del Bo Boffino\"",
+    "address": "Via Oberdan, 3, 27023 Cassolnovo",
+    "created_at": null,
+    "updated_at": null,
+    "town": "CASSOLNOVO",
+    "phone": "0381/910150",
+    "email": "biblioteca.cassolo@libero.it"
+  },
+  {
+    "id": "19",
+    "name": "Biblioteca comunale \"Roberto Rampi\"",
+    "address": "Piazza Garibaldi, 26, 27024 Cilavegna",
+    "created_at": null,
+    "updated_at": null,
+    "town": "CILAVEGNA",
+    "phone": "0381/660552",
+    "email": "biblio@comune.cilavegna.pv.it"
+  },
+  {
+    "id": "20",
+    "name": "Biblioteca comunale \"Dino Laboranti\"",
+    "address": "Via Strada Nuova, 1, 27020 Dorno",
+    "created_at": null,
+    "updated_at": null,
+    "town": "DORNO",
+    "phone": "0382/998208",
+    "email": "bibliotecadorno@comune.dorno.pv.it"
+  },
+  {
+    "id": "21",
+    "name": "Biblioteca comunale",
+    "address": "Via Roma, 10, 27032 Ferrera Erbognone",
+    "created_at": null,
+    "updated_at": null,
+    "town": "FERRERA ERBOGNONE",
+    "phone": "0382/998208",
+    "email": "biblio.ferrera@alice.it"
+  },
+  {
+    "id": "22",
+    "name": "Biblioteca",
+    "address": "via Annaratone, 29, 27030 Frascarolo",
+    "created_at": null,
+    "updated_at": null,
+    "town": "FRASCAROLO",
+    "phone": "0384/849043",
+    "email": "biblioteca@comunefrascarolo.gov.it"
+  },
+  {
+    "id": "23",
+    "name": "Biblioteca civica \"Gemma Biroli\"",
+    "address": "Piazza Castello, 27025 Gambolò",
+    "created_at": null,
+    "updated_at": null,
+    "town": "GAMBOLÒ",
+    "phone": "0381/937282",
+    "email": "servizisociali@comune.gambolo.pv.it"
+  },
+  {
+    "id": "24",
+    "name": "Biblioteca civica \"Mino Milani\"",
+    "address": "Via Ss. Trinità, 6, 27026 Garlasco",
+    "created_at": null,
+    "updated_at": null,
+    "town": "GARLASCO",
+    "phone": "0382/801009",
+    "email": "bibliogarlasco@yahoo.it"
+  },
+  {
+    "id": "25",
+    "name": "Biblioteca comunale \"Carlo Cantoni\"",
+    "address": "Via Cairoli, 25, 27027 Gropello Cairoli",
+    "created_at": null,
+    "updated_at": null,
+    "town": "GROPELLO CAIROLI",
+    "phone": "0382/815020",
+    "email": "biblioteca@comune.gropellocairoli.pv.it"
+  },
+  {
+    "id": "26",
+    "name": "Biblioteca comunale",
+    "address": "Via Giuseppe Mazzini, 61, 27030 Langosco",
+    "created_at": null,
+    "updated_at": null,
+    "town": "LANGOSCO",
+    "phone": "0384/78075",
+    "email": "ragioneria.langosco@libero.it"
+  },
+  {
+    "id": "27",
+    "name": "Biblioteca comunale \"Opicino De Canistris\"",
+    "address": "Via Carducci, 37/B, 27034 Lomello",
+    "created_at": null,
+    "updated_at": null,
+    "town": "LOMELLO",
+    "phone": "0384/858356",
+    "email": "biblioteca.lomello@libero.it"
+  },
+  {
+    "id": "28",
+    "name": "Biblioteca civica \"Giuseppe Masinari\"",
+    "address": "Piazza della Repubblica, 39, 27035 Mede",
+    "created_at": null,
+    "updated_at": null,
+    "town": "MEDE",
+    "phone": "0384/822217",
+    "email": "biblioteca@comune.mede.pv.it"
+  },
+  {
+    "id": "29",
+    "name": "Biblioteca comunale",
+    "address": "Via Marconi, 21",
+    "created_at": null,
+    "updated_at": null,
+    "town": "MEZZANA RABATTONE",
+    "phone": "0382/918862",
+    "email": "sergioferrari1949@gmail.com"
+  },
+  {
+    "id": "30",
+    "name": "Civico 17, Biblioteca civica \"Francesco Pezza\"",
+    "address": "Via Vittorio Veneto 17, 27036 Mortara",
+    "created_at": null,
+    "updated_at": null,
+    "town": "MORTARA",
+    "phone": "0384/91805",
+    "email": "info@civico17.it"
+  },
+  {
+    "id": "31",
+    "name": "Biblioteca comunale",
+    "address": "",
+    "created_at": null,
+    "updated_at": null,
+    "town": "NICORVO",
+    "phone": "",
+    "email": ""
+  },
+  {
+    "id": "32",
+    "name": "Biblioteca comunale",
+    "address": "Via Stazione 27030, Pieve Albignola",
+    "created_at": null,
+    "updated_at": null,
+    "town": "PIEVE ALBIGNOLA",
+    "phone": "0382/999842",
+    "email": "biblioteca.pievealbignola@gmail.com"
+  },
+  {
+    "id": "33",
+    "name": "Biblioteca comunale",
+    "address": "Piazza G. Marconi, 2 27037, Pieve del Cairo",
+    "created_at": null,
+    "updated_at": null,
+    "town": "PIEVE DEL CAIRO",
+    "phone": "",
+    "email": "biblioteca.pievedelcairo@gmail.com"
+  },
+  {
+    "id": "34",
+    "name": "Biblioteca civica",
+    "address": "Piazza B. Marliano, Robbio",
+    "created_at": null,
+    "updated_at": null,
+    "town": "ROBBIO",
+    "phone": "0384/670882",
+    "email": "biblioteca@comune.robbio.pv.it"
+  },
+  {
+    "id": "35",
+    "name": "Biblioteca comunale",
+    "address": "Piazza Pietro Corti, 27020 San Giorgio di Lomellina",
+    "created_at": null,
+    "updated_at": null,
+    "town": "SAN GIORGIO DI LOMELLINA",
+    "phone": "0384/43010",
+    "email": "bcomunesangiorgio@libero.it"
+  },
+  {
+    "id": "36",
+    "name": "Biblioteca civica \"C. Tacconi\"",
+    "address": "Via Mazzini, 80, 27039 Sannazzaro de' Burgondi",
+    "created_at": null,
+    "updated_at": null,
+    "town": "SANNAZZARO DE'BURGONDI",
+    "phone": "0382/997485",
+    "email": "ascaglia@comune.sannazzarodeburgondi.pv.it"
+  },
+  {
+    "id": "37",
+    "name": "Biblioteca civica \"Francesco Moro\"",
+    "address": "Via Castello, 8, 27020 Sartirana Lomellina",
+    "created_at": null,
+    "updated_at": null,
+    "town": "SARTIRANA LOMELLINA",
+    "phone": "0384/800806",
+    "email": "bibliotecadisartirana@gmail.com"
+  },
+  {
+    "id": "38",
+    "name": "Biblioteca comunale",
+    "address": "Via XI febbraio 15, 27020 Scaldasole",
+    "created_at": null,
+    "updated_at": null,
+    "town": "SCALDASOLE",
+    "phone": "0382.997454",
+    "email": "biblioteca@comune.scaldasole.pv.it"
+  },
+  {
+    "id": "39",
+    "name": "Biblioteca comunale \"R. Burchi\"",
+    "address": "Via Laboranti 4 27020 Tromello",
+    "created_at": null,
+    "updated_at": null,
+    "town": "TROMELLO",
+    "phone": "0382/86021",
+    "email": "biblioteca@comune.tromello.pv.it"
+  },
+  {
+    "id": "40",
+    "name": "Biblioteca comunale \"G.Marucchi\"",
+    "address": "Corte Granda, 27020 Valle Lomellina",
+    "created_at": null,
+    "updated_at": null,
+    "town": "VALLE LOMELLINA",
+    "phone": "0384 797645",
+    "email": "bibliotecavalle@libero.it"
+  },
+  {
+    "id": "41",
+    "name": "Biblioteca civica \"Lucio Mastronardi\"",
+    "address": "Corso Cavour, 82, 27029 Vigevano",
+    "created_at": null,
+    "updated_at": null,
+    "town": "VIGEVANO",
+    "phone": "0381/70149",
+    "email": "mastronardi@comune.vigevano.pv.it"
+  },
+  {
+    "id": "42",
+    "name": "Biblioteca civica per Ragazzi \"Gianni Cordone\"",
+    "address": "Via Boldrini 1 27029 Vigevano",
+    "created_at": null,
+    "updated_at": null,
+    "town": "VIGEVANO",
+    "phone": "0381/690754",
+    "email": "ragazzi@comune.vigevano.pv.it"
+  },
+  {
+    "id": "43",
+    "name": "Psicobiblioteca A.P.S. Creativamente",
+    "address": "Via Madonna 7 Dolori, 30/A, 27029 Vigevano",
+    "created_at": null,
+    "updated_at": null,
+    "town": "VIGEVANO",
+    "phone": "333/7573670",
+    "email": "creativamente.pv@gmail.com"
+  },
+  {
+    "id": "44",
+    "name": "Biblioteca dell'Associazione Astrolabio",
+    "address": "Via Agnese Riberia, 14, 27029 Vigevano",
+    "created_at": null,
+    "updated_at": null,
+    "town": "VIGEVANO",
+    "phone": "349/6328829",
+    "email": "astrolabiovigevano@gmail.com"
+  }
+]
