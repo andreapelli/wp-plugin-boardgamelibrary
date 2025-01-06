@@ -76,6 +76,30 @@
                     }
                     ?>
                 </div>
+                <?php
+                $copies = get_post_meta(get_the_ID(), '_gioco_da_tavolo_copies', true);
+                if (!empty($copies) && is_array($copies)) {
+                    echo '<div class="gioco-availability">';
+                    echo '<h3>' . __('Copie e disponibilità', 'boardgamelibrary') . '</h3>';
+                    echo '<ul class="library-list">';
+                    foreach ($copies as $copy) {
+                        $library = get_post($copy['default_library']);
+                        if ($library) {
+                            $status_class = $copy['status'] == 'available' ? 'green' : 'red';
+                            $town = get_post_meta($library->ID, '_biblioteca_town', true);
+                            echo '<li>';
+                            echo '<span class="dashicons dashicons-align-none ' . $status_class . '"></span> ';
+                            if (!empty($town)) {
+                                echo '<em>' . esc_html(ucfirst($town)) . ', </em>';
+                            }
+                            echo esc_html($library->post_title);
+                            echo '</li>';
+                        }
+                    }
+                    echo '</ul>';
+                    echo '</div>';
+                }
+                ?>
             </article>
             <?php
         endwhile;

@@ -87,6 +87,31 @@
                             <p>Stile di gioco: <?php echo join(', ', wp_list_pluck($stile_di_gioco, 'name')); ?></p>
                         <?php endif; ?>
                     </div>
+                    <?php
+                    // Mostra le copie
+                    $copies = get_post_meta(get_the_ID(), '_gioco_da_tavolo_copies', true);
+                    if (!empty($copies)) {
+                        echo '<div class="gioco-availability">';
+                        echo '<h4>' . __('Copie e disponibilità', 'boardgamelibrary') . '</h4>';
+                        echo '<ul class="library-list">';
+                        foreach ($copies as $copy) {
+                            $library = get_post($copy['default_library']);
+                            if ($library) {
+                                $status_class = $copy['status'] == 'available' ? 'green' : 'red';
+                                $town = get_post_meta($library->ID, '_biblioteca_town', true);
+                                echo '<li>';
+                                echo '<span class="dashicons dashicons-align-none ' . $status_class . '"></span> ';
+                                if (!empty($town)) {
+                                    echo '<em>' . esc_html(ucfirst($town)) . '</em>, ';
+                                }
+                                echo esc_html($library->post_title);
+                                echo '</li>';
+                            }
+                        }
+                        echo '</ul>';
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
             <?php endwhile;
         else: ?>

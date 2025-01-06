@@ -40,6 +40,7 @@ class Boardgamelibrary_Templates {
 
     public function enqueue_styles() {
         wp_enqueue_style('boardgamelibrary-style', plugin_dir_url(dirname(__FILE__)) . 'assets/css/boardgamelibrary-styles.css', array(), BOARDGAMELIBRARY_VERSION);
+        wp_enqueue_style('dashicons');
     }
 
     public function enqueue_scripts() {
